@@ -1,0 +1,222 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, h1, p, ul, li, a {
+    font-family: 'JetBrains Mono', monospace;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    padding: 30px;
+    justify-content: space-between;
+    width: 100%;
+}
+
+header img {
+    height: 40px;
+    width: 30px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+nav ul li {
+    padding: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: black;
+    font-weight: 400;
+}
+
+nav ul li a.button-like {
+    display: inline-block;
+    padding: 8px 27px;
+    margin: 0 2px 2px 0;
+    border: 3px solid rgb(0,0,0);
+    border-radius: 32px;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: "JetBrains Mono", monospace;
+    font-weight: 700;
+    color: #000000;
+    text-align: center;
+    transition: all 0.2s;
+}
+
+nav ul li a.button-like:hover{
+    color: white;
+    background-color: rgb(0, 0, 0);
+}
+
+.timeline-container {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 90px 0;
+}
+
+.event {
+    position: relative;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.event-dot {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-color: #000000;
+    position: absolute;
+    transition: box-shadow 0.3s ease;
+}
+
+.event-dot::after {
+    content: '';
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #ffffff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: transform 0.3s ease;
+}
+
+.event:hover .event-dot::after {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.event-content {
+    display: none;
+    position: absolute;
+    bottom: 0;
+    height: 90px;
+    width: 700px;
+    padding: 15px;
+    border-radius: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.right-content {
+    left: 30px;
+}
+
+.left-content {
+    right: 30px;
+}
+
+.event:hover .event-content {
+    display: block;
+}
+
+.event-content p {
+    margin: 0;
+    color: #000000;
+    font-size: 24px;
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+    header {
+        padding: 15px;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    header img, nav ul {
+        align-self: center;
+    }
+
+    nav ul {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    nav ul li {
+        padding: 5px 10px;
+    }
+
+    .event-content {
+
+    width: 350px;
+    height: 120px;
+    font-size: 10px;
+
+    }
+
+}
+
+@media screen and (max-width: 767px) {
+    header {
+                padding: 10px; /* Reduce padding to save space */
+                flex-direction: row; /* Keep the layout horizontal */
+                align-items: center; /* Ensure alignment */
+            }
+
+            header img {
+                height: 30px; /* Reduce image size for small screens */
+                width: auto; /* Maintain aspect ratio */
+                align-self: center; /* Center align */
+            }
+
+            nav ul {
+                flex-direction: row; /* Keep items in a row */
+                flex-wrap: nowrap; /* Prevent wrapping to save vertical space */
+                justify-content: center; /* Center items */
+                gap: 5px; /* Reduce gap to save horizontal space */
+                padding-inline-start: 0; /* Remove default padding */
+                margin: 0; /* Remove default margins */
+
+            }
+
+            nav ul li {
+                padding: 5px; /* Adjust padding to make it tighter */
+            }
+
+            nav ul li a {
+                font-size: 12px; /* Reduce font size to ensure items fit */
+                padding: 5px 8px; /* Adjust button-like links to be smaller */
+                display: inline-block; /* or block, depending on your layout needs */
+                text-align: center; /* Ensure text is centered within the element */
+
+            }
+
+            nav ul li a.button-like {
+                    padding: 5px 15px; /* Smaller padding to reduce overall size */
+                    font-size: 12px; /* Smaller font size for the text inside the pill */
+                    border-radius: 20px; /* Optionally adjust border radius for a more "pill" like appearance */
+                    margin: 5px 0; /* Adjust margin for spacing around each button */
+                }
+
+            .event-dot {
+                    margin: 0 15px; /* Increase horizontal margin */
+                }
+
+            .event-content {
+
+                width: 175px;
+                height: 80px;
+
+                }
+
+            .event-content p {
+                    font-size: 12px; /* Example: smaller font size for small devices */
+                }
+
+}
