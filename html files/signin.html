@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>berkecan | Sign In</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../css%20files/signin.css">
+</head>
+<body>
+<header>
+    <a href="mainScreen.html"> <img src="../1.png" alt="berkecan koçyiğit">
+        <nav>
+            <ul>
+                <li><a href="my_work.html">My Work</a></li>
+                <li><a href="experience.html">Experience</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="signup.html" class="button-like">Sign Up</a></li>
+                <li><a href="signin.html" class="button-like">Sign In</a></li>
+            </ul>
+        </nav>
+</header>
+<div class="signin-container">
+    <h1>Sign In</h1>
+    <form action="#" method="post">
+        <div class="input-group">
+            <div class="input-box">
+                <label for="email">Email Address *</label>
+                <input type="email" id="email" name="email">
+            </div>
+            <div class="input-box">
+                <label for="password">Password *</label>
+                <input type="password" id="password" name="password" minlength="6">
+            </div>
+        </div>
+        <div class="submit-box">
+            <button type="submit">Sign In</button>
+        </div>
+        <div class="validation-message" id="validationMessage"></div>
+    </form>
+</div>
+<script src="../js%20files/signin.js"></script>
+</body>
+</html>
