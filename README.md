@@ -2,7 +2,7 @@
 This is a personal website project prepared within the scope of CS 391 course, using pure HTML, CSS and JavaScript.
 
 ### Project Description
-Our project is a comprehensive personal website for a friend of ours designed to showcase professional experience, projects, and personal insights. Users are able to see a brief introduction to Berkecan on the Main Screen page. They can check his projects and work experience on the My Work and Experience pages respectively. Our website also allows users to contact Berkecan on the Contact page and enables them to sign in or sign up for the website depending on whether they registered before. This functionality is provided on the Sign In and Sign Up pages. 
+Our project is a comprehensive personal website for a friend of ours designed to showcase professional experience, projects, and personal insights. Users are able to see a brief introduction to Berkecan on the Main Screen page. They can check his projects and work experience on the My Work and Experience pages respectively. Our website also allows users to contact Berkecan on the Contact page and enables them to sign in or sign up for the website depending on whether they registered before. This functionality is provided on the Sign In and Sign Up pages. Finally, the Admin page is not visible in the navigation bar but is reachable by typing the URL of the Admin.html page's location. This is a design choice to avoid users entering the Admin page, since Admin page deploys crucial operations such as storing all members registered, and updating and deleting their information.
 
 ### Usage Scenarios
 
