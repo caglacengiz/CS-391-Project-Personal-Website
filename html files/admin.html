@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>berkecan | Admin</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../css%20files/admin.css">
+    <script src="../js%20files/admin.js"></script>
+</head>
+<body>
+<div id="admin-container">
+    <div id="side-menu">
+        <div class="menu-item" onclick="listAllMembers()">List All Members</div>
+        <div class="menu-item" onclick="listAllMessages()">List All Messages</div>
+        <div class="menu-item" onclick="showUpdateForm()">Update A User's Name And Password</div>
+        <div class="menu-item" onclick="showEmailUpdateForm()">Update User's Email</div>
+        <div class="menu-item" onclick="showDeleteUserForm()">Delete A User</div>
+    </div>
+
+    <div id="content">
+        <div id="updateForm" class="form-style" style="display:none;">
+            <input type="email" id="updateEmail" placeholder="User's Email">
+            <input type="text" id="updateName" placeholder="New Name">
+            <input type="password" id="updatePassword" placeholder="New Password">
+            <button onclick="updateUser()">Update User</button>
+        </div>
+
+        <div id="updateEmailForm" class="form-style" style="display:none;">
+            <input type="email" id="oldEmail" placeholder="Old Email">
+            <input type="email" id="newEmail" placeholder="New Email">
+            <button onclick="updateUserEmail()">Update Email</button>
+        </div>
+
+        <div id="deleteForm" class="form-style" style="display:none;">
+            <input type="email" id="deleteEmail" placeholder="User's Email">
+            <button onclick="deleteUser()">Delete User</button>
+        </div>
+
+        <div id="search-container" class="form-style" style="display:none;">
+            <div class="input-group">
+                <input type="text" id="search-input">
+                <button id="search-button">Search</button>
+                <input type="text" id="filter-input">
+                <button id="filter-button">Filter</button>
+            </div>
+
+        </div>
+        <div id="membersList"></div>
+        <div id="messagesList"></div>
+
+    </div>
+
+</div>
+</body>
+</html>
