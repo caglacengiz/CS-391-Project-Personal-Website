@@ -1,0 +1,195 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, h1, p, ul, li, a {
+    font-family: 'JetBrains Mono', monospace;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    padding: 30px;
+    justify-content: space-between;
+    width: 100%; /* header stretches across the full width */
+}
+
+header img {
+    height: 40px;
+    width: 30px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+nav ul li {
+    padding: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: black;
+    font-weight: 400; /* normal weight */
+}
+
+nav ul li a#signup, nav ul li a#signin {
+    border-radius: 20px; /* pill-like shape */
+    padding: 10px 20px;
+    font-weight: 700; /* bold text */
+}
+
+nav ul li a.button-like {
+    display: inline-block;
+    padding: 8px 27px;
+    margin: 0 2px 2px 0;
+    border: 3px solid rgb(0,0,0);
+    border-radius: 32px;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: "JetBrains Mono", monospace;
+    font-weight: 700;
+    color: #000000;
+    text-align: center;
+    transition: all 0.2s;
+}
+
+nav ul li a.button-like:hover{
+    color: white;
+    background-color: rgb(0, 0, 0);
+}
+
+.introduction {
+    text-align: left;
+    margin: 100px 50px 50px 100px;
+    padding: 50px 50px 50px 100px; /* Top, right, bottom, left */
+}
+
+.introduction h1 {
+    font-size: 56px;
+    font-weight: 700;
+    margin-bottom: 16px;
+}
+
+.introduction h2 {
+    font-size: 56px;
+    font-weight: 700;
+    margin-bottom: 16px;
+}
+
+.introduction p {
+    font-size: 24px; /* Keep the paragraph size */
+    line-height: 1.5;
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+
+    header {
+            padding: 15px;
+            flex-direction: row;
+            align-items: center;
+        }
+
+        header img, nav ul {
+            align-self: center;
+        }
+
+        nav ul {
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        nav ul li {
+            padding: 5px 10px;
+        }
+
+    .introduction {
+        margin: 50px; /* Reduced margin */
+        padding: 20px; /* Reduced padding */
+    }
+
+    .introduction h1, .introduction h2 {
+        font-size: 48px; /* Reduced font size */
+    }
+
+    .introduction p {
+        font-size: 20px; /* Slightly smaller text for easier reading */
+    }
+}
+
+@media screen and (max-width: 767px) {
+
+    header {
+            padding: 10px; /* Reduce padding to save space */
+            flex-direction: row; /* Keep the layout horizontal */
+            align-items: center; /* Ensure alignment */
+        }
+
+        header img {
+            height: 30px; /* Reduce image size for small screens */
+            width: auto; /* Maintain aspect ratio */
+            align-self: center; /* Center align */
+        }
+
+        nav ul {
+            flex-direction: row; /* Keep items in a row */
+            flex-wrap: nowrap; /* Prevent wrapping to save vertical space */
+            justify-content: center; /* Center items */
+            gap: 5px; /* Reduce gap to save horizontal space */
+            padding-inline-start: 0; /* Remove default padding */
+            margin: 0; /* Remove default margins */
+
+        }
+
+        nav ul li {
+            padding: 5px; /* Adjust padding to make it tighter */
+        }
+
+        nav ul li a {
+            font-size: 12px; /* Reduce font size to ensure items fit */
+            padding: 5px 8px; /* Adjust button-like links to be smaller */
+            display: inline-block; /* or block, depending on your layout needs */
+            text-align: center; /* Ensure text is centered within the element */
+
+        }
+
+        nav ul li a.button-like {
+                padding: 5px 15px; /* Smaller padding to reduce overall size */
+                font-size: 12px; /* Smaller font size for the text inside the pill */
+                border-radius: 20px; /* Optionally adjust border radius for a more "pill" like appearance */
+                margin: 5px 0; /* Adjust margin for spacing around each button */
+            }
+
+    .introduction {
+        padding: 20px; /* Reduce padding to use space more efficiently */
+        text-align: center; /* Center-align text for a balanced appearance */
+    }
+
+    .introduction h1, .introduction h2 {
+        font-size: 24px; /* Reduce heading font size for space efficiency */
+        margin-bottom: 16px; /* Adjust spacing between headings and paragraph */
+    }
+
+    .introduction p {
+        font-size: 16px; /* Adjust paragraph font size for readability */
+    }
+
+    .introduction {
+            margin-left: 10px; /* Decrease left margin */
+            margin-right: 10px; /* Decrease right margin */
+            /* Adjust padding if needed */
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+}
+
+
+
+
