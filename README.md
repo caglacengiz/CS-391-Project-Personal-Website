@@ -51,8 +51,8 @@ Our project is a comprehensive personal website for a friend of ours designed to
 **Çağla Cengiz:** 
 
 - Design of the website 
-- Created HTML, CSS, and JavaScript files of Admin, Contact, Sign In and Sign Up pages
+- Created HTML, CSS, and JavaScript files of Admin, Contact, My Work and Experience pages
 
 **Deniz Naz Altaş:** 
-- Created HTML, CSS, and JavaScript files of Main Screen, My Work and Experience pages
+- Created HTML, CSS, and JavaScript files of Main Screen, Sign In and Sign Up pages
 - Responsive web design
