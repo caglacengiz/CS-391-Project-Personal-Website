@@ -1,0 +1,218 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, h1, p, ul, li, a {
+    font-family: 'JetBrains Mono', monospace;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    padding: 30px;
+    justify-content: space-between;
+    width: 100%; /* header stretches across the full width */
+}
+
+header img {
+    height: 40px;
+    width: 30px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+nav ul li {
+    padding: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: black;
+    font-weight: 400; /* normal weight */
+}
+
+nav ul li a.button-like {
+    display: inline-block;
+    padding: 8px 27px;
+    margin: 0 2px 2px 0;
+    border: 3px solid rgb(0,0,0);
+    border-radius: 32px;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: "JetBrains Mono", monospace;
+    font-weight: 700;
+    color: #000000;
+    text-align: center;
+    transition: all 0.2s;
+}
+
+nav ul li a.button-like:hover{
+    color: white;
+    background-color: rgb(0, 0, 0);
+}
+
+.contact-container {
+    background: #fff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 120px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact-container h1 {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.input-group {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.input-box {
+    flex: 1;
+    min-width: calc(50% - 20px);
+    margin-bottom: 20px;
+}
+
+.input-box label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.input-box input,
+.input-box textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 16px;
+}
+
+.input-box textarea {
+    resize: none;
+    height: 120px;
+}
+
+.submit-box button {
+    width: 100%;
+    padding: 15px;
+    background-color: #333;
+    border: none;
+    border-radius: 30px;
+    color: white;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+
+header {
+        padding: 15px;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    header img, nav ul {
+        align-self: center;
+    }
+
+    nav ul {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    nav ul li {
+        padding: 5px 10px;
+    }
+
+}
+
+@media screen and (max-width: 767px) {
+
+header {
+            padding: 10px; /* Reduce padding to save space */
+            flex-direction: row; /* Keep the layout horizontal */
+            align-items: center; /* Ensure alignment */
+        }
+
+        header img {
+            height: 30px; /* Reduce image size for small screens */
+            width: auto; /* Maintain aspect ratio */
+            align-self: center; /* Center align */
+        }
+
+        nav ul {
+            flex-direction: row; /* Keep items in a row */
+            flex-wrap: nowrap; /* Prevent wrapping to save vertical space */
+            justify-content: center; /* Center items */
+            gap: 5px; /* Reduce gap to save horizontal space */
+            padding-inline-start: 0; /* Remove default padding */
+            margin: 0; /* Remove default margins */
+
+        }
+
+        nav ul li {
+            padding: 5px; /* Adjust padding to make it tighter */
+        }
+
+        nav ul li a {
+            font-size: 12px; /* Reduce font size to ensure items fit */
+            padding: 5px 8px; /* Adjust button-like links to be smaller */
+            display: inline-block; /* or block, depending on your layout needs */
+            text-align: center; /* Ensure text is centered within the element */
+
+        }
+
+        nav ul li a.button-like {
+                padding: 5px 15px; /* Smaller padding to reduce overall size */
+                font-size: 12px; /* Smaller font size for the text inside the pill */
+                border-radius: 20px; /* Optionally adjust border radius for a more "pill" like appearance */
+                margin: 5px 0; /* Adjust margin for spacing around each button */
+            }
+
+        .contact-container {
+                max-width: 90%; /* Make the container width more responsive */
+                padding: 20px; /* Reduce padding for more space */
+                margin: 60px auto 40px; /* Adjust margin to reduce space above and below the container */
+            }
+
+            .input-group {
+                flex-direction: column; /* Stack input fields vertically */
+            }
+
+            .input-box {
+                flex: 1 0 100%; /* Make input boxes take full width of their container */
+                min-width: auto; /* Reset minimum width to allow full width usage */
+                margin-bottom: 15px; /* Reduce space between input fields */
+            }
+
+            .input-box input,
+            .input-box textarea {
+                padding: 8px; /* Slightly reduce padding inside input fields */
+                font-size: 14px; /* Reduce font size for space efficiency */
+            }
+
+            .submit-box button {
+                padding: 10px; /* Reduce padding inside the submit button for consistency */
+                font-size: 16px; /* Adjust font size to match input fields */
+            }
+
+}
