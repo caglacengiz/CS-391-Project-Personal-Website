@@ -46,6 +46,9 @@ Our project is a comprehensive personal website for a friend of ours designed to
 5. A message pops up to say that the user has successfully signed in the website.
 
 
+![Flow Chart](flowchart.jpg)
+
+
 ### Project members
 
 **Çağla Cengiz:** 
